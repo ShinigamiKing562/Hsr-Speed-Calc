@@ -7,7 +7,9 @@ def speed_required():
         cycles = 150 + (int(ent_cycles.get()) * 100)
         ddd = int(ent_ddd.get()) * 2400
         eagle = int(ent_eagle.get()) * 2500
-        speed = (turns - ddd - eagle) / cycles
+        base = int(ent_base.get())
+        buff = base * 0.01 * int(ent_buff.get())
+        speed = (turns - ddd - eagle) / cycles - buff
         lbl_speed["text"] = f"Speed: {round(speed, 2)}"
     except ValueError:
         lbl_speed["text"] = "Please enter valid numbers."
@@ -32,7 +34,9 @@ fields = [
     ("Number of turns", "ent_turns"),
     ("Number of cycles", "ent_cycles"),
     ("Number of DDD procs", "ent_ddd"),
-    ("Number of eagle procs", "ent_eagle")
+    ("Number of eagle procs", "ent_eagle"),
+    ("Base speed", "ent_base"),
+    ("In-Battle speed boost", "ent_buff")
 ]
 
 entries = {}
@@ -49,6 +53,8 @@ ent_turns = entries["ent_turns"]
 ent_cycles = entries["ent_cycles"]
 ent_ddd = entries["ent_ddd"]
 ent_eagle = entries["ent_eagle"]
+ent_base = entries["ent_base"]
+ent_buff = entries["ent_buff"]
 
 # Button
 btn_speed = tk.Button(
