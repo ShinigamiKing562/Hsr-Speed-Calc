@@ -1,1 +1,1 @@
-A speed calc for the game "Honkai Star Rail"
+A speed calc for the game "Honkai Star Rail". Made for personal use but is compatible with any window machine/computer that can run .exe binaries. Super simple rn but I will add more functions to it. Development will be slow though.
