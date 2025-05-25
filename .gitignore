@@ -188,5 +188,4 @@ cython_debug/
 .cursorindexingignore
 
 # Icon files
-
-.ico
+Icon/
